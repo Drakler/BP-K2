@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-//Ushtrimi 1, K2
+//Ushtrimi 1, K2 - gr A
 /*
 int main() {
 	const int n = 4;
@@ -28,7 +28,7 @@ int main() {
 }
 */
 
-//Ushtrimi 2, K2
+//Ushtrimi 2, K2 - gr A
 /*
 int pow(int a, int b) {
 	int rez = 1;
@@ -46,7 +46,7 @@ int main() {
 }
 */
 
-//Ushtrimi 3, K2
+//Ushtrimi 3, K2 - gr A
 /*
 int p = 2;							//1. p= 2
 int prodhimi(int n) {
@@ -69,7 +69,7 @@ int main() {
 }
 */
 
-//Ushtrimi 4, K2
+//Ushtrimi 4, K2 - gr A
 /*
 #include <math.h>
 #define abs(x) (abs(x))
@@ -83,7 +83,7 @@ int main() {
 }
 */
 
-//Ushtrimi 5, K2
+//Ushtrimi 5, K2 - gr A
 /*
 int main()
 {
@@ -114,7 +114,7 @@ int main()
 }
 */
 
-//Ushtrimi 6
+//Ushtrimi 6, K2 - gr A
 /*
 #include <math.h> // per pow dhe sqrt
 
@@ -148,6 +148,112 @@ int main() {
 	else if (e == Diagonalja) {
 		Llogaritja(q, w, Diagonalja);
 	}
-return 0;
+	return 0;
+}
+*/
+
+//Ushtrimi 7, K2 - gr A
+/*
+#include <iomanip>
+struct studenti
+{
+	float id;
+	string emri,
+		mbiemri,
+		drejtimi;
+};
+void shfaq(studenti t) {
+	cout << fixed << setprecision(0)
+		<< t.id << "\n"
+		<< t.emri << "\n"
+		<< t.mbiemri << "\n"
+		<< t.drejtimi;
+}
+int main() {
+	studenti s;
+	s.id = 227018100003;
+	s.emri = "Enis";
+	s.mbiemri = "Laci";
+	s.drejtimi = "FIEK";
+	shfaq(s);
+	return 0;
+}
+*/
+
+//Ushtrimi 8, K2 - gr A
+/*
+double indexOfMin(double v[], int n) {
+	int a = 0, min = v[0];
+	for (int i = 0; i < n; i++) {
+		if (v[i] < min){
+			min = v[i];
+			a = i; 
+			}
+	}
+	return a;
+}
+int main() {
+	const int n = 20;
+	double Vargu[n];
+	for (int i = 0; i < n; i++) {
+		cout << "Jepe antarin e " << i + 1 << " te vargut = ";
+		cin >> Vargu[i];
+	}
+	cout << "Indeksi me vleren minimale eshte = " << indexOfMin(Vargu, n);
+	return 0;
+}
+*/
+
+//Ushtrimi 9, K2 - gr A
+/*
+#define PARE 1
+#define DYTE 2
+void funksioni() {
+	int i = 1;
+	while (i <= DYTE) {
+		cout << "Ekzekutimi " << i << endl;
+		i++;
+	}
+}
+void funksioni(int k) {								//2. bartet ky funksion me k = 2 pasi qe #define DYTE eshte 2 "funksioni(2)"
+	while (k > 0) {									//3. Plotsohet kushti pasi qe 2 > 0						//6. plotsohet prap kushti 1 > 0					//9. nuk plotsohet kushti dhe mbaron
+		cout << "Ekzekutimi " << k << endl;			//4. ekzekutohet kjo si (Ekzekutimi 2)					//7. Ekzekutohet si (Ekzekutimi 1) pasi qe k = 1
+		k--;										//5. k iu hjeket 1 numer (k-- = k - 1 rrjedh qe 2 - 1)  //8. k-- rrjedh k - 1 ===== 1 - 1 =0
+	}
+}
+int main() {
+	int vlera = 3;
+	switch (vlera) {
+	case PARE: funksioni(); break;
+	case DYTE: funksioni(DYTE + 2); break;
+	default: funksioni(DYTE); break;				//1. plotesohet ky kusht pasi nuk ka case 3,
+	}
+	return 0;
+}
+*/
+
+//Ushtrimi 10, K2 - gr A
+/*
+struct vetura
+{
+	string marka;
+	int vitiProdhimit, kilometrat;
+	double mesatarja(int vitiProdhimit, int kilometrat) {
+		double rez = 0, a = 0;
+		for (int i = vitiProdhimit + 1; i <= 2023; i++) {             // ose for (int i = vitiProdhimit; i < 2023; i++)
+			a++;
+		}
+		rez = (kilometrat / a) * 1.0;
+		return rez;
+	}
+};
+int main() {
+	vetura Vjuaj;
+	Vjuaj.marka = "Audi";
+	Vjuaj.vitiProdhimit = 2015;
+	Vjuaj.kilometrat = 189000;
+	cout << "Mesatarja eshte = " 
+		<< Vjuaj.mesatarja(Vjuaj.vitiProdhimit, Vjuaj.kilometrat);
+	return 0;
 }
 */
