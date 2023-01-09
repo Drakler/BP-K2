@@ -186,3 +186,84 @@ int main() {
 	return 0;
 }
 */
+
+//Ushtrimi 8, K2 - gr B
+/*
+struct Studenti
+{
+	int id;
+	string emri, mbiemri, drejtimi;
+};
+Studenti lexo() {
+	Studenti s;
+	cin >> s.id;
+	cin >> s.emri;
+	cin >> s.mbiemri;
+	cin >> s.drejtimi;
+
+	return s;
+}
+int main() {
+	Studenti s = lexo();
+	cout << s.id << endl;
+	cout << s.emri << endl;
+	cout << s.mbiemri << endl;
+	cout << s.drejtimi << endl;
+	return 0;
+}
+*/
+
+//Ushtrimi 9, K2 - gr B
+/*
+#define PARE 1
+#define DYTE 2
+void funksioni() {						
+	int i = 3;									//2. i = 3
+	while (i <= DYTE + 2) {						//3. 3 <= 4		.6 4 <= 4	9. 5 <= 4 svlen
+		cout << "Ekzekutimi " << i << endl;		//4. 3			.7 4
+		i++;									//5. 3 + 1		.8 4 + 1
+	}
+}
+void funksioni(int k) {
+	while (k > 0) {
+		cout << "Ekzekutimi " << k << endl;
+		k--;
+	}
+}
+int main() {
+	int vlera = 1;
+	switch (vlera) {							//1. vlera = 1 dhe merr case PARE pasi PARE = vlera
+	case PARE: funksioni(); break;
+	case DYTE: funksioni(DYTE + 2); break;
+	default: funksioni(DYTE); break;
+	}
+	return 0;									//10. perfundon
+}
+*/
+
+//Ushtrimi 10, K2 - gr B
+/*
+struct vetura {
+	int kilometrat;
+	int vitiProdhimit;
+	string marka;
+};
+void vjetersia(int VP) {
+	int rez = 0;
+	cout << "Vitet e perdorimit jane \n";
+	for (int i = VP; i <= 2023; i++) {
+		cout <<  VP << endl;
+		VP++;
+		rez++;
+	}
+	cout << "Dmth ka qen ne perdorim qe " << rez << " Vite!";
+}
+int main() {
+	vetura bmw;
+	bmw.marka = "M3";
+	bmw.vitiProdhimit = 2018;
+	bmw.kilometrat = 224506;
+	vjetersia(bmw.vitiProdhimit);
+	return 0;
+}
+*/
